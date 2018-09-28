@@ -2,17 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { TimelineComponent } from './timeline/timeline.component';
+import { VisTimelineComponent } from './vis-timeline/vis-timeline.component';
+import { VisTimelineService } from './vis-timeline.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TimelineComponent
+    VisTimelineComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [VisTimelineService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

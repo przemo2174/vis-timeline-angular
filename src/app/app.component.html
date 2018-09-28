@@ -1,7 +1,9 @@
-<vis-timeline (click)="onTimelineClicked($event)" 
-              (contextMenu)="onContextMenu($event)" 
-              (doubleClick)="onDoubleClick($event)"
-              (itemOver)="onItemOver($event)"
-              (itemOut)="onItemOut($event)"
-              [items]="items" 
-              [options]="options"></vis-timeline>
+<button type="button" (click)="onBtn1Click()">Destroy Timeline 1</button>
+<button type="button" (click)="onBtn2Click()">Destroy Timeline 2</button>
+<vis-timeline [name]="'timelineTest1'" (click)="onTimelineClicked($event)" (contextMenu)="onContextMenu($event)"
+    (doubleClick)="onDoubleClick($event)" (itemOver)="onItemOver($event)" (itemOut)="onItemOut($event)" [items]="items"
+    [options]="options"></vis-timeline>
+
+<vis-timeline [name]="'timelineTest2'" (click)="onTimelineClicked($event)" (contextMenu)="onContextMenu($event)"
+    (doubleClick)="onDoubleClick($event)" (itemOver)="onItemOver($event)" (itemOut)="onItemOut($event)" [items]="items"
+    [options]="options"></vis-timeline>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataSet } from 'vis';
+import { VisTimelineService } from './vis-timeline.service';
 
 @Component({
   selector: 'app-root',
@@ -30,6 +31,24 @@ export class AppComponent {
      }
    }
    };
+
+  constructor(private timelineService: VisTimelineService) {}
+
+  onBtn1Click() {
+    let timeline = this.timelineService.getTimeline('timelineTest1');
+    if(timeline) {
+      timeline.destroy();
+    }
+    
+  }
+
+  onBtn2Click() {
+    console.log("clicked 2");
+    let timeline = this.timelineService.getTimeline('timelineTest2');
+    if(timeline) {
+      timeline.destroy();
+    }  
+  }
 
   onTimelineClicked(event) {
     console.log('Click event');
